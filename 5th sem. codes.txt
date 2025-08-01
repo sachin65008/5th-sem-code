@@ -74,3 +74,69 @@ console.log(result); // Output: 11
             </script>
             </body>
             </html>
+
+
+5>   CONSTRUCTOR
+   // No argument Constructor
+
+function Person0()
+{
+    this.fname="Sachin";
+    this.lname="Kumar";
+}
+const Person=new Person0()
+console.log(Person);
+
+    // PARAMITRIZED CONSTRUCTOR
+function person(fname,lname,age)
+{
+    this.fname=fname;
+    this.lname=lname;
+    this.age=age;
+}
+    const person8=new person("Sachin", "Kumar", 30);
+    const person9=new person("kartik", "bhandarkar", 25);
+
+    console.log(person8);
+    console.log(person9);
+
+
+6>   OBJECT PROPERTIES AND ACCESSING
+ const fruit={
+    name: "Apple",
+    color: "Red",
+    weight: "150g",
+    taste: "Sweet",
+};
+console.log(fruit);
+
+
+
+7>   SPREAD OPERATOR
+function sum(a, b, c, d, e)
+{
+    return a + b + c + d + e;
+}
+let num = [2,4,5,7,89];
+let result = sum(...num);
+console.log(result); // Output: 107
+
+
+8>   SET
+let num=new Set()
+num.add(2);
+num.add(3);
+num.add(4);
+num.add("sachin");
+console.log(num);
+
+
+
+9>   MAP
+let fruits = new Map([
+    ["apple", "red"],
+    ["banana", "yellow"],
+    ["grape", "purple"],
+    ["orange", "orange"]
+]);
+console.log(fruits);
