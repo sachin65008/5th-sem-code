@@ -1,0 +1,76 @@
+ 1>   Class Component
+
+      // App.js
+import React, { Component } from 'react';
+class welcome extends Component
+{
+  render()
+{
+  return  <h1> class component</h1>
+}
+}
+
+export default welcome;
+
+      //  Welcome.js
+const greet = () => "hello world";
+export default greet;
+
+
+2>   FUNCTIONAL COMPONENT
+       //App.js
+
+import Welcome from './component/welcome';
+export default Welcome;
+
+
+      //Welcome.js
+
+import React from 'react';
+function Welcome(){
+    <style>
+        background-color: pink;
+    </style>
+    return <h1><center>welcome to react</center></h1>
+}
+export default Welcome;
+
+3>   ARROW FUNCTION (.js)
+    //arrow.js
+let add=function(num1,num2)
+{
+    return num1 + num2;
+}
+let sum=add
+let result=sum(5,6)
+console.log(result); // Output: 11
+
+4>    DATATYPE<html>
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> datatype </title>
+    </head>
+    <body>
+        <script>
+            var a,b,c;
+            document.write("<h1>Before initialization</h1>");
+            document.write("<br> Datatype of a is: " + typeof a);
+            document.write("<br> Datatype of b is: " + typeof b);
+            document.write("<br> Datatype of c is: " + typeof c);
+            a=10;
+            b=34.1;
+            c="Hello";
+            var marks=[30,60,90,100];
+            var student={name:"Sachin",rollNo:29};
+            document.write("<h1>After initialization</h1>");
+            document.write("<br> Datatype of a is: " + typeof a);
+            document.write("<br> Datatype of b is: " + typeof b);
+            document.write("<br> Datatype of c is: " + typeof c);
+            document.write("<br> Datatype of marks is: " + typeof marks);
+            document.write("<br> Datatype of student is: " + typeof student);
+            </script>
+            </body>
+            </html>
