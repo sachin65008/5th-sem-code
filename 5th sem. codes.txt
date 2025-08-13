@@ -310,3 +310,114 @@ export default App;
 
 
 
+11> REGISTRATION FORM
+
+    App.js
+import React, {useState} from 'react';
+import './App.css';
+
+  function RegistrationPage ({onSwitch}){
+    const Register = () => {
+      alert('Registration successful!');
+      onSwitch('LoginPage');
+      };
+    return (
+      <div className="form-container">
+        <h2>Registration</h2>
+        <form onSubmit={Register}>
+          <input type="text" placeholder="first Name" required/><br />
+          <input type="text" placeholder="Last name" required/><br />
+          <input type="email" placeholder="email" required/><br />
+          <input type="password" placeholder="password" required/><br />
+          <button type="submit">Register</button><br />
+        </form>
+      </div>
+    );
+  }
+  function LoginPage ({onSwitch}){
+    const Login = () => {
+      alert('Login Successful!');
+      onSwitch('Feedback');
+    };
+    return(
+      <div className="form-container">
+      <h2>Login</h2>
+      <form onSubmit={Login}>
+        <input type="email" placeholder="email" required /><br />
+        <input type="password" placeholder="password" required /><br />
+        <button type="submit">login</button><br />
+      </form>
+      </div>
+    );
+  }
+  function FeedbackForm({onSwitch}){
+    const Feedback = () => {
+      alert('Thankyou for your feedback');
+      onSwitch ('ThankYou');
+    };
+    return (
+      <div className="form-container">
+        <h2>Feedback</h2>
+        <form onSubmit={Feedback}>
+          <input type="text" placeholder="Full Name" required /><br />
+          <textarea placeholder="Your feedback" required ></textarea><br />
+          <button type="submit">Submit Feedback</button><br />
+        </form>
+      </div>
+    );
+  }
+  function ThankYou() {
+    return (
+      <div className="thank-you-container">
+        <h2>Thank You!</h2>
+        <p>Your feedback has been submitted successfully.</p>
+      </div>
+    );
+  }
+  function App() {
+    const [Page, setPage] = useState('Register');
+    return(
+      <div className="App">
+        {Page==='Register' && <RegistrationPage onSwitch={setPage} />}
+        {Page==='LoginPage' && <LoginPage onSwitch={setPage} />}
+        {Page==='Feedback' && <FeedbackForm onSwitch={setPage} />}
+        {Page==='ThankYou' && <ThankYou onSwitch={setPage} />}
+      </div>
+    );
+  }
+
+export default App;
+
+
+   App.css
+.form-container {
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  color:darkblue;
+}
+
+input, textarea, button {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
